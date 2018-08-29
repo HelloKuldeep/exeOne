@@ -116,10 +116,6 @@ header li:hover {
     color: black;
 }
 
-.toggle{
-	display: none;
-}
-
 header nav{
 	display: flex;
 }
@@ -144,23 +140,56 @@ header nav li:last-child{
 }
 
 @media (max-width: 700px){
-	.toggle {
-		display: flex;
-	}
 
-	header .dropd {
+	header nav{
+		display: none;
+		flex-direction: column;
+	}
+	
+	.nav-toggle {
 		display: none;
 	}
+	
+	.nav-toggle:checked ~ nav {
+		display: block;
+	}
 
-	/* header nav {
-		.toggle {
-		  background: seagreen;
-		  color: white;
-		}
-		li {
-		  display: block;
-		}
-	  } */
+	.nav-toggle-label {
+		position: absolute;
+		top: 0;
+		right: 8%;
+		margin-left: 1em;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		float: right;
+	}
+
+	.nav-toggle-label span,
+	.nav-toggle-label span::before,
+	.nav-toggle-label span::after {
+		display: block;
+		background: white;
+		height: 2px;
+		width: 2em;
+		border-radius: 2px;
+		position: relative;
+	}
+
+	.nav-toggle-label span::before,
+	.nav-toggle-label span::after {
+		content: '';
+		position: absolute;
+	}
+
+	.nav-toggle-label span::before {
+		bottom: 7px;
+	}
+
+	.nav-toggle-label span::after {
+		top: 7px;
+	}
+
 }
 
  	/* Hero Section */
