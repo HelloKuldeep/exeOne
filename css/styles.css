@@ -1,6 +1,4 @@
-/*-------------
- 	General
--------------*/
+ 	/* General */
 
 *{
 	margin: 0;
@@ -52,7 +50,7 @@ section{
 	flex-direction: column;
 	align-items: center;
 
-	padding: 125px 100px;
+	padding: 100px 50px;
 }
 
 @media (max-width: 1000px){
@@ -94,12 +92,9 @@ ul.grid{
 	justify-content: center;
 }
 
-/*-------------
- 	Header
--------------*/
+ 	/* Header */
 
 header{
-	/* stack order of an element */
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -126,10 +121,6 @@ header li:hover {
 	display: none;
 }
 
-header h2{
-	font-family: 'Quicksand', sans-serif;
-}
-
 header nav{
 	display: flex;
 }
@@ -137,7 +128,6 @@ header nav{
 header nav li{
 	margin: 0 15px;
 	font-size: 20px;
-	font-family: 'Quicksand', sans-serif;
 }
 
 header nav li:first-child{
@@ -154,14 +144,9 @@ header nav li:last-child{
 	}
 }
 
-
 @media (max-width: 700px){
 	.toggle {
 		display: flex;
-	}
-	
-	header nav, header h2 {
-		justify-content: space-between;
 	}
 
 	header .dropd {
@@ -179,9 +164,7 @@ header nav li:last-child{
 	  } */
 }
 
-/*----------------
- 	Hero Section
-----------------*/
+ 	/* Hero Section */
 
 .hero{
 	position: relative;
@@ -210,7 +193,7 @@ header nav li:last-child{
 	width: 100%;
 	height: 100%;
 	background-color: #414a4f;
-	opacity: 0.75;
+	opacity: 0.5;
 }
 
 .hero h1{
@@ -250,11 +233,93 @@ header nav li:last-child{
 
 }
 
+ 	/* Features Section */
+
+.features{
+	background-color: #f7f7f7;
+}
+
+.features .grid li{
+	padding: 0 30px;
+	flex-basis: 33%;
+	text-align: center;
+}
+
+.features .grid li i{
+    font-size: 50px;
+    color: #2196F3;
+    margin-bottom: 25px;
+}
+
+.features .grid li h4{
+	color: #555;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.features .grid li p{
+    margin: 0;
+}
+
+@media (max-width: 1000px){
+
+	.features .grid li{
+		flex-basis: 70%;
+		margin-bottom: 65px;
+	}
+
+	.features .grid li:last-child{
+		margin-bottom: 0;
+	}
+
+}
+
+@media (max-width: 600px){
+
+	.features .grid li{
+		flex-basis: 100%;
+	}
+
+}
+
+ 	/* My Work Section */
+
+.my-work{
+	background-color: #fff;
+}
+
+.my-work .grid li{
+	padding: 20px;
+	height: 350px;
+	border-radius: 3px;
+
+	background-clip: content-box;
+	background-size: cover;
+	background-position: center;
+	background-color: #333;
+}
+
+.my-work .grid li.small{
+	flex-basis: 40%;
+}
+
+.my-work .grid li.large{
+	flex-basis: 60%;
+}
+
+
+@media (max-width: 1000px){
+
+	.my-work .grid li.small,
+	.my-work .grid li.large{
+		flex-basis: 100%;
+	}
+
+}
+
 /* rest goes here */
 
-/*-------------
- 	Footer
--------------*/
+ 	/* Footer */
 
 footer{
 	display: flex;
@@ -302,38 +367,3 @@ footer p a{
 	}
 
 }
-
-
-
-
-
-
-.mybox {
-	width: auto;
-	height: auto;
-	display: flex;
-	flex-direction: row;
-}
-
-.mybox div{
-	width: 33%;
-	height: 200px;
-	background-color: hotpink;
-	margin: 20px;
-	text-align: center;
-}
-
-@media (max-width: 700px){
-	.mybox {
-		flex-direction: column;
-	}
-
-	.mybox div{
-		width: 200px;
-		height: 200px;
-		background-color: greenyellow;
-		margin: 20px;
-		text-align: center;
-	}
-}
-
