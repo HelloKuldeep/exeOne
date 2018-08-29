@@ -125,12 +125,12 @@ header nav li{
 	font-size: 20px;
 }
 
-header nav li:first-child{
-	margin-left: 0;	
+.nav-toggle {
+	display: none;
 }
 
-header nav li:last-child{
-	margin-right: 0;	
+.nav-toggle-label {
+	display: none;
 }
 
 @media (max-width: 1000px){
@@ -143,11 +143,20 @@ header nav li:last-child{
 
 	header nav{
 		display: none;
+	}
+
+	header {
 		flex-direction: column;
+		align-items: center;
 	}
 	
-	.nav-toggle {
-		display: none;
+	header h2{
+		margin: 5px 0;
+	}
+
+	header nav li {
+		margin: 5px 0;
+		text-align: center
 	}
 	
 	.nav-toggle:checked ~ nav {
@@ -157,12 +166,11 @@ header nav li:last-child{
 	.nav-toggle-label {
 		position: absolute;
 		top: 0;
-		right: 8%;
+		right: 5%;
 		margin-left: 1em;
 		height: 100%;
 		display: flex;
 		align-items: center;
-		float: right;
 	}
 
 	.nav-toggle-label span,
