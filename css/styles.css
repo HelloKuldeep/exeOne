@@ -120,6 +120,11 @@ header nav{
 	display: flex;
 }
 
+header nav ul{
+	display: flex;
+	flex-direction: row;
+}
+
 header nav li{
 	margin: 0 15px;
 	font-size: 20px;
@@ -156,7 +161,11 @@ header nav li{
 
 	header nav li {
 		margin: 5px 0;
-		text-align: center
+		text-align: center;
+	}
+
+	header nav ul {
+		flex-direction: column;
 	}
 	
 	.nav-toggle:checked ~ nav {
