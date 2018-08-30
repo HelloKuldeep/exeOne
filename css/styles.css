@@ -174,12 +174,12 @@ header nav li{
 
 	.nav-toggle-label {
 		position: absolute;
-		top: 0;
+		top: 30px;
 		right: 5%;
 		margin-left: 1em;
 		height: 100%;
 		display: flex;
-		align-items: center;
+		/* align-items: center; */
 	}
 
 	.nav-toggle-label span,
@@ -227,6 +227,7 @@ header nav li{
 	height: 100%;
 	background-size: cover;
 	background-color: #2196F3;
+	background-position: center;
 	z-index: -1;
 }
 
